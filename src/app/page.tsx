@@ -71,6 +71,11 @@ export default async function Home() {
         </Button>
       </section>      
     </main>
+    <main>
+             <div>
+
+      </div>
+    </main>
     </>
   )
 }
