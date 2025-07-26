@@ -15,7 +15,7 @@ export default async function Home() {
       {/* Sidebar and Main Content as before, but... */}
       <section className="z-10 w-full max-w-6xl flex flex-col items-center text-center mb-12 p-4 bg-card text-card-foreground rounded-2xl shadow-2xl">
         <Avatar className="w-24 h-24 mb-5 shadow-lg bg-secondary">
-          <AvatarImage src="/logo.png" alt="Site Logo" />
+          <AvatarImage />
           <AvatarFallback>Mankirat</AvatarFallback>
         </Avatar>
         <h1 className="text-5xl font-extrabold text-primary mb-4">

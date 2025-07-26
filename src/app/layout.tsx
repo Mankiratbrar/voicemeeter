@@ -3,12 +3,15 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
-import {Menu} from "@/components/Menu";
- 
+import {Search} from "@/components/Search"
+import { NavMenu } from "@/components/NavMenu";
+import { HoverIcon } from "@/components/HoverIcon";
+import { useTheme } from "next-themes"
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
 });
+
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -22,29 +25,34 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-         <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-          </ThemeProvider>
-        
+     <body>
+        <ThemeProvider>
+          <SidebarProvider>
+            <div className="flex min-h-screen bg-[color:var(--color-background)] text-[color:var(--color-foreground)]">
+              {/* Sidebar */}
+              <AppSidebar />
+              
+              {/* Main Content Wrapper */}
+              <main className="flex flex-col flex-1 min-h-screen">
+                {/* Top nav bar */}
+                <header className="flex items-center justify-between border-b border-[color:var(--color-border)] px-6 py-3 bg-[color:var(--color-background)]">
 
-      <SidebarProvider>
-      <AppSidebar />
-      <main>
-        <div className="flex flex-row items-start w-full max-w-screen">
-        <SidebarTrigger className="mb-3 mr-3 ml-3 align-middle mt-2"/>
-        <Menu/>
-        </div>
-        {children}
-      </main>
-    </SidebarProvider>
+                  <div className="flex items-center gap-2">
+                    <SidebarTrigger />
+                    <HoverIcon />
+
+                  </div>
+                  <Search />
+                  <NavMenu />
+                </header>
+                {/* Page content */}
+                <div className="flex-1 overflow-auto p-6">{children}</div>
+              </main>
+            </div>
+          </SidebarProvider>
+        </ThemeProvider>
       </body>
+
     </html>
   );
 }

@@ -1,3 +1,4 @@
+"use client"
 import {
   Menubar,
   MenubarCheckboxItem,
@@ -13,12 +14,13 @@ import {
   MenubarSubTrigger,
   MenubarTrigger,
 } from "@/components/ui/menubar"
+import { redirect, RedirectType } from 'next/navigation'
 
 export function Menu() {
   return (
     <Menubar className="m-0 mt-1.5">
       <MenubarMenu>
-        <MenubarTrigger>File</MenubarTrigger>
+        <MenubarTrigger >File</MenubarTrigger>
         <MenubarContent>
           <MenubarItem>
             New Tab <MenubarShortcut>⌘T</MenubarShortcut>
@@ -86,6 +88,16 @@ export function Menu() {
           <MenubarItem inset>Toggle Fullscreen</MenubarItem>
           <MenubarSeparator />
           <MenubarItem inset>Hide Sidebar</MenubarItem>
+        </MenubarContent>
+      </MenubarMenu>
+      <MenubarMenu>
+        <MenubarTrigger>About</MenubarTrigger>
+        <MenubarContent>
+          <MenubarItem onClick={() => redirect('/about',RedirectType.push)}>About This App</MenubarItem>
+          <MenubarItem>Check for Updates...</MenubarItem>
+          <MenubarSeparator />
+          <MenubarItem>Privacy Policy</MenubarItem>
+          <MenubarItem>Terms of Service</MenubarItem>
         </MenubarContent>
       </MenubarMenu>
       <MenubarMenu>
