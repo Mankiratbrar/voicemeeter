@@ -72,9 +72,9 @@ export default async function Home() {
       </section>      
     </main>
     <main>
-             <div>
+          <div>
 
-      </div>
+                </div>
     </main>
     </>
   )
