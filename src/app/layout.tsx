@@ -28,17 +28,17 @@ export default function RootLayout({
      <body>
         <ThemeProvider>
           <SidebarProvider>
-            <div className="flex min-h-screen bg-[color:var(--color-background)] text-[color:var(--color-foreground)]">
+            <div className="flex min  -h-screen bg-[color:var(--color-background)] text-[color:var(--color-foreground)] min-w-screen">
               {/* Sidebar */}
               <AppSidebar />
               
               {/* Main Content Wrapper */}
               <main className="flex flex-col flex-1 min-h-screen">
                 {/* Top nav bar */}
-                <header className="flex items-center justify-between border-b border-[color:var(--color-border)] px-6 py-3 bg-[color:var(--color-background)]">
+                <header className="flex items-center justify-between border-b border-[color:var(--color-border)] px-6 py-3 bg-[color:var(--color-background)] -mt-3">
 
                   <div className="flex items-center gap-2">
-                    <SidebarTrigger />
+                    <SidebarTrigger className="mt-2"/>
                     <HoverIcon />
 
                   </div>

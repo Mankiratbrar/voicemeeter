@@ -23,7 +23,7 @@ export const items = [
   },
   {
     title: "Inbox",
-    url: "inbox",
+    url: "/inbox",
     icon: Inbox,
   },
   {
