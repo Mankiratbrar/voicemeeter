@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
 export default async function Home() {
   return (
     <>
@@ -69,12 +70,10 @@ export default async function Home() {
         <Button asChild>
           <a href="mailto:your@email.com">Get in Touch</a>
         </Button>
+        <div>
+          <span className="text-sm text-muted-foreground">Powered by Vercel</span>
+        </div>
       </section>      
-    </main>
-    <main>
-          <div>
-
-                </div>
     </main>
     </>
   )
