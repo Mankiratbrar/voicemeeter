@@ -47,7 +47,7 @@ export default function InboxPage() {
               <Button
                 variant="default"
                 size="sm"
-                className="flex items-center gap-1 rounded-lg bg-[color:var(--color-primary)] hover:bg-[color:var(--color-primary-hover)] transition-colors"
+                className="flex items-center gap-1 rounded-lg bg-[color:var(--color-primary)] hover:bg-[color:var(--color-primary-hover)] hover:text-black transition-colors"
               >
                 <Plus className="w-4 h-4" />
                 New Message
