@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-     <body>
+     <body className="bg-primary">
         <ThemeProvider>
           <SidebarProvider>
             <div className="flex min  -h-screen bg-[color:var(--color-background)] text-[color:var(--color-foreground)] min-w-screen">
