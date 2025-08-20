@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Mail, Plus } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const messages = [
+const messages = [  
   {
     sender: "Alice Smith",
     time: "Just now",
