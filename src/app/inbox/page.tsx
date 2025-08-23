@@ -104,8 +104,7 @@ export default function InboxPage() {
           </div>
         </section>
 
-        {/* Right side - Info Panel */}
-        <aside className="w-1/3 bg-white/70 dark:bg-[color:var(--background)] rounded-xl border border-[color:var(--color-border)] p-6 shadow flex flex-col justify-between">
+       <aside className="w-1/3 bg-white/70 dark:bg-[color:var(--background)] rounded-xl border border-[color:var(--color-border)] p-6 shadow flex flex-col justify-between">
           <div>
             <h2 className="text-xl font-semibold mb-4">Details / Info Panel</h2>
             <p className="mb-3">
